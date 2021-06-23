@@ -1,3 +1,3 @@
-# interview-init
+# GitHub User Lookup
 
-This is a reasonable starting place for the Sajari coding test.
+This web app allows users to search for any GitHub user's repo count. 
