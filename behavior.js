@@ -14,7 +14,13 @@ function handleUsernameFormSubmit(e) {
     }
   }).then(res => res.json())
     .then(data => {
-      resultP.innerHTML = `${username} has <span class="bold-text">${data.public_repos}</span> repositories!`
+      let str;
+      if (data.message) {
+        str = `"${username}" is not a valid GitHub user.`
+      } else {
+        str = `${username} has <span class="bold-text">${data.public_repos}</span> repositories!`;
+      }
+      resultP.innerHTML = str;
     })
     .catch(err => console.log(err))
 }
