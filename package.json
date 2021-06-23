@@ -1,0 +1,10 @@
+{
+  "name": "interview-init",
+  "version": "1.0.0",
+  "description": "Starting place for Sajari FE interview.",
+  "main": "index.js",
+  "repository": "git@github.com:wwalser/interview-init.git",
+  "author": "Wesley Walser <wwalser@sajari.com>",
+  "license": "NONE",
+  "private": true
+}
