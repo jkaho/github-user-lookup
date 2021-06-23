@@ -55,3 +55,9 @@
 .bold-text {
     font-weight: bold;
 }
+
+@media (max-width: 600px) {
+    #main {
+        width: 95%;
+    }
+}
