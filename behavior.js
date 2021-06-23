@@ -5,6 +5,7 @@ const usernameInput = document.getElementById("username-input");
 
 function handleUsernameFormSubmit(e) {
   e.preventDefault();
+  const username = usernameInput.value;
 }
 
 usernameForm.addEventListener("submit", handleUsernameFormSubmit);
