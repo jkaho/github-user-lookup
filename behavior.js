@@ -18,7 +18,7 @@ function handleUsernameFormSubmit(e) {
       if (data.message) {
         str = `"${username}" is not a valid GitHub user.`
       } else {
-        str = `${username} has <span class="bold-text">${data.public_repos}</span> repositories!`;
+        str = `<span class="bold-text">${username}</span> has <span class="bold-text">${data.public_repos}</span> repositories!`;
       }
       resultP.innerHTML = str;
     })
