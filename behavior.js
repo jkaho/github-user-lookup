@@ -14,7 +14,6 @@ function handleUsernameFormSubmit(e) {
     }
   }).then(res => res.json())
     .then(data => {
-      console.log(data)
       let str;
       if (data.message) {
         str = `"${username}" is not a valid GitHub user.`
