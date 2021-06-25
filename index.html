@@ -9,6 +9,14 @@
 		<div id="main">
 			<!-- <p>Page has loaded. Now make it do neat things.</p> -->
 			<form id="username-form">
+				<div>
+					<input id="public-repos" name="data-type" value="public-repos" type="radio" checked>
+					<label for="public-repos">Public repos</label>
+					<input id="original-works" name="data-type" value="original-works" type="radio">
+					<label for="original-works">Original Works</label>
+					<input id="stars" name="data-type" value="stars" type="radio">
+					<label for="stars">Stars on Original Works</label>
+				</div><br/>
 				<input type="text" id="username-input" placeholder="Enter a GitHub username">
 				<button type="submit">Submit</button>
 			</form>
