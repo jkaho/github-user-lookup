@@ -16,11 +16,16 @@ function handleUsernameFormSubmit(e) {
   } else {
     userCounts = getOriginalStars(usernameList);
   }
-  userCounts.then(res => {
+  userCounts.then(res => {    
     resultP.innerHTML = "";
     res.sort((a, b) => b.count - a.count);
     for (let i = 0; i < res.length; i++) {
-      let str = `<div class="${i === 0 ? "winner" : ""}"><span class="bold-text">${res[i].username}</span> - <span class="bold-text">${res[i].count}</span></div>`
+      let str;
+      if (res[i].count === undefined) {
+        str = `<div>Cannot find user "${res[i].username}"</div>`
+      } else {
+        str = `<div class="${i === 0 ? "winner" : ""}"><span class="bold-text">${res[i].username}</span> - <span class="bold-text">${res[i].count}</span></div>`
+      }
       resultP.innerHTML += str;
     }
   })
