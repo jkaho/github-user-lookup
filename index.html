@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 		<link rel="stylesheet" type="text/css" media="all" href="style.css">
 		<script defer type="text/javascript" charset="utf-8" src="behavior.js"></script>
 		<title>GitHub User Lookup</title>
@@ -8,7 +10,12 @@
 	<body>
 		<div id="main">
 			<!-- <p>Page has loaded. Now make it do neat things.</p> -->
+			<h1><i class="fab fa-github"></i> GitHub User Lookup</h1>
 			<form id="username-form">
+				<div id="searchbar">
+					<input type="text" id="username-input" placeholder="Enter a GitHub username">
+					<button type="submit">Submit</button>
+				</div><br/>
 				<div>
 					<input id="public-repos" name="data-type" value="public-repos" type="radio" checked>
 					<label for="public-repos">Public repos</label>
@@ -16,9 +23,7 @@
 					<label for="original-works">Original Works</label>
 					<input id="stars" name="data-type" value="stars" type="radio">
 					<label for="stars">Stars on Original Works</label>
-				</div><br/>
-				<input type="text" id="username-input" placeholder="Enter a GitHub username">
-				<button type="submit">Submit</button>
+				</div>
 			</form>
 			<div id="result-box">
 				<p id="result"></p>

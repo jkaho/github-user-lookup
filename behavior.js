@@ -73,11 +73,11 @@ function getOriginals(usernames) {
 }
 
 function getOriginalStars(usernames) {
-  let originalRepos = [];
+  let starsOnOriginalRepos = [];
   for (let i = 0; i < usernames.length; i++) {
     const username = usernames[i].trim();
     let starCount = 0;
-    originalRepos.push(
+    starsOnOriginalRepos.push(
       fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
         method: "GET",
         headers: {
@@ -95,7 +95,7 @@ function getOriginalStars(usernames) {
         .catch(err => console.log(err))
     )
   }
-  return Promise.all(originalRepos);
+  return Promise.all(starsOnOriginalRepos);
 }
 
 usernameForm.addEventListener("submit", handleUsernameFormSubmit);
